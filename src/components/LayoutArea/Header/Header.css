@@ -1,0 +1,15 @@
+.Header {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header div {
+  display: flex;
+  align-items: center;
+  background-color: #0073e6;
+}
+
+.Header svg {
+}
