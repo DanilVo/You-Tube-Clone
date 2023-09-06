@@ -2,6 +2,11 @@
   font-family: Roboto;
   src: url(./Assets/Fonts/Roboto-Regular.ttf);
 }
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto;
   font-weight: bold;

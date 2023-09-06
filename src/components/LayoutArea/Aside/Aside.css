@@ -1,4 +1,24 @@
 .Aside {
-	display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+}
+
+.Aside button {
+  text-align: start;
+  margin-bottom: 15px;
+  width: 150px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: large;
+  border-radius: 10px;
+}
+
+.Aside button:hover {
+  background-color: #0073e6;
+  transition: 0.5s;
+}
+
+.Aside svg {
+  width: 20px;
 }

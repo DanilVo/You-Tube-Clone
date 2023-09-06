@@ -1,3 +1,5 @@
-.Main {
-	
+.Main .cards {
+    display: flex;
+    float: left;
+    margin: 50px 50px 25px 10px;
 }

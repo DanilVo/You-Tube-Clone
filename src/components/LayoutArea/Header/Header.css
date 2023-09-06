@@ -1,15 +1,15 @@
 .Header {
-  margin: 0 20px;
+  margin: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .Header div {
+  justify-content: center;
   display: flex;
   align-items: center;
-  background-color: #0073e6;
-}
-
-.Header svg {
+  background: linear-gradient(to right, #0073e6, #0073e600);
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px 5px 5px 10px;
 }

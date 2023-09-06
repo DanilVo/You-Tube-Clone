@@ -1,0 +1,28 @@
+.VideoCard {
+  background-color: #0073e6;
+  border-radius: 10px;
+  color: #000000;
+  width: 350px;
+  height: 360px;
+  display: flex;
+  flex-direction: row;
+}
+
+.VideoCard a {
+  all: unset;
+  cursor: pointer;
+  display: block;
+}
+
+.VideoCard a img {
+  width: 350px;
+}
+
+.VideoCard section {
+  padding: 0 10px;
+}
+
+.VideoCard section a:nth-child(2) {
+  color: #0000007e;
+  text-decoration: underline;
+}

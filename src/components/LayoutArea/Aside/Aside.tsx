@@ -1,29 +1,60 @@
-import { NavLink } from 'react-router-dom';
-import './Aside.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAtom, faCode, faGamepad, fasv } from '@fortawesome/free-solid-svg-icons';
-import {  } from '@fortawesome/free-brands-svg-icons'
+import {
+  faAtom,
+  faBasketball,
+  faCode,
+  faFilm,
+  faGamepad,
+  faGraduationCap,
+  faPodcast,
+  faShirt,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./Aside.css";
 
-function Aside(): JSX.Element {
+function Aside({ setPageName }: { setPageName: (val:string)=>void }): JSX.Element {
+  const pageHandler = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLInputElement;
+    setPageName(target.value);
+  };
+
   return (
     <div className="Aside">
-      <NavLink to={'/new'}>
+      <button onClick={pageHandler} value="new">
         <FontAwesomeIcon icon={faGamepad} />
-        New
-      </NavLink>
-      <NavLink to={'/coding'}>
+        &ensp; New
+      </button>
+      <button onClick={pageHandler} value="coding">
         <FontAwesomeIcon icon={faCode} />
-        Coding
-      </NavLink>
-      <NavLink to={'/reactJs'}><FontAwesomeIcon icon={faAtom} />ReactJs</NavLink>
-      <NavLink to={'/education'}>Education</NavLink>
-      <NavLink to={'/podcasts'}>Podcasts</NavLink>
-      <NavLink to={'/movies'}>Movies</NavLink>
-      <NavLink to={'/gaming'}>Gaming</NavLink>
-      <NavLink to={'/live'}>Live</NavLink>
-      <NavLink to={'/sport'}>Sport</NavLink>
-      <NavLink to={'/fashion'}>Fashion</NavLink>
-      <NavLink to={'/beauty'}>Beauty</NavLink>
+        &ensp; Coding
+      </button>
+      <button onClick={pageHandler} value="reactJs">
+        <FontAwesomeIcon icon={faAtom} />
+        &ensp; ReactJs
+      </button>
+      <button onClick={pageHandler} value="education">
+        <FontAwesomeIcon icon={faGraduationCap} />
+        &ensp; Education
+      </button>
+      <button onClick={pageHandler} value="podcast">
+        <FontAwesomeIcon icon={faPodcast} />
+        &ensp; Podcasts
+      </button>
+      <button onClick={pageHandler} value="movies">
+        <FontAwesomeIcon icon={faFilm} />
+        &ensp; Movies
+      </button>
+      <button onClick={pageHandler} value="gaming">
+        <FontAwesomeIcon icon={faGamepad} />
+        &ensp; Gaming
+      </button>
+      <button onClick={pageHandler} value="sport">
+        <FontAwesomeIcon icon={faBasketball} />
+        &ensp; Sport
+      </button>
+      <button onClick={pageHandler} value="fashion">
+        <FontAwesomeIcon icon={faShirt} />
+        &ensp; Fashion
+      </button>
     </div>
   );
 }
