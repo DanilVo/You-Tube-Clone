@@ -1,10 +1,11 @@
+import { NavLink } from 'react-router-dom';
 import './Header.css';
+import Main from '../Main/Main';
 
 function Header(): JSX.Element {
-  
   return (
     <div className="Header">
-      <div>
+      <NavLink to={'/'}>
         <svg
           color="white"
           width="46"
@@ -17,7 +18,7 @@ function Header(): JSX.Element {
           <path d="M11.287 14.949a.5.5 0 0 1-.787-.41V9.46a.5.5 0 0 1 .787-.409l3.628 2.54a.5.5 0 0 1 0 .82l-3.628 2.539Z"></path>
         </svg>
         YouTobe
-      </div>
+      </NavLink>
       <input placeholder="Search" />
     </div>
   );

@@ -1,14 +1,15 @@
-import axios from "axios";
-import appConfig from "../Utils/AppConfig";
+import axios from 'axios';
+import appConfig from '../Utils/AppConfig';
+
 class YouTobeService {
-  public async getVideos(url: string) {
+  public async getVideos(url: string): Promise<any[]> {
     const options = {
       params: {
         maxResults: 50,
       },
       headers: {
-        "X-RapidAPI-Key": "45f67ff11dmshb9159dcbe37c0ecp1b0068jsna0e855c575e8",
-        "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+        'X-RapidAPI-Key': '45f67ff11dmshb9159dcbe37c0ecp1b0068jsna0e855c575e8',
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
       },
     };
     const { data } = await axios.get(`${appConfig.BASE_URL}/${url}`, options);
@@ -16,6 +17,6 @@ class YouTobeService {
   }
 }
 
-const youTobeService = new YouTobeService()
+const youTobeService = new YouTobeService();
 
-export default youTobeService
+export default youTobeService;

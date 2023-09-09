@@ -7,14 +7,14 @@ function VideoCard({ video }: { video: VideoCardModel }): JSX.Element {
     <div className="VideoCard">
       <div>
         <NavLink to={`/video/${video.id.videoId}`}>
-          <img src={video.snippet.thumbnails.high.url} alt="" />
+          <img src={video?.snippet.thumbnails.high.url} alt="" />
         </NavLink>
         <section>
           <NavLink to={`/video/${video.id.videoId}`}>
-            {video.snippet.title}
+            {video?.snippet.title}
           </NavLink>
           <NavLink to={`/channel/${video.snippet.channelId}`}>
-            {video.snippet.channelTitle}
+            {video?.snippet.channelTitle}
           </NavLink>
         </section>
       </div>

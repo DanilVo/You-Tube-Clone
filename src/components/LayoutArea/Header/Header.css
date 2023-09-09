@@ -1,15 +1,23 @@
 .Header {
-  margin: 20px;
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.Header div {
+.Header a {
   justify-content: center;
   display: flex;
+  text-decoration: none;
   align-items: center;
   background: linear-gradient(to right, #0073e6, #0073e600);
   padding: 10px 20px 10px 10px;
   border-radius: 10px 5px 5px 10px;
+}
+
+.Header input {
+  all: unset;
+  border: 1px solid #0073e6;
+  border-radius: 15px;
+  padding: 10px;
 }
