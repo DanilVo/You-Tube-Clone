@@ -15,7 +15,7 @@ function VideoDetails(): JSX.Element {
 
   useEffect(() => {
     youTobeService
-      .getVideos(`videos?part=snippet,statistics&id=${path}`)
+      .getStatistics(`${path}`)
       .then((data) => setVideoData(data[0]));
 
     youTobeService

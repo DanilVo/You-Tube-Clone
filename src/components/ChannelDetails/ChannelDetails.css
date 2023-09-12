@@ -1,9 +1,9 @@
-
 .ChannelDetails .cards {
   display: flex;
   float: left;
   margin: 100px 50px 25px 10px;
 }
+
 .ChannelDetails .banner {
   display: flex;
   height: 130px;

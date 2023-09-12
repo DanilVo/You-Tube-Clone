@@ -1,3 +1,5 @@
-.Search {
-	
+.Search .VideoCard {
+  display: flex;
+  float: left;
+  margin: 100px 50px 25px 10px;
 }

@@ -7,7 +7,7 @@ function VideoCard({ video }: { video: VideoCardModel }): JSX.Element {
     <div className="VideoCard">
       <div>
         <NavLink to={`/video/${video.id.videoId}`}>
-          <img src={video?.snippet.thumbnails.high.url} alt="" />
+          <img src={video?.snippet?.thumbnails?.high?.url} />
         </NavLink>
         <section>
           <NavLink to={`/video/${video.id.videoId}`}>

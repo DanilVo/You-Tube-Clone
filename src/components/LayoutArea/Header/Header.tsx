@@ -1,8 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import Main from '../Main/Main';
+import { useState } from 'react';
 
 function Header(): JSX.Element {
+  const [seachValue, setSearchValue] = useState('')
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>)=>{
+    const {target} = event
+    setSearchValue(target.value)
+  }
+  
   return (
     <div className="Header">
       <NavLink to={'/'}>
@@ -19,7 +25,10 @@ function Header(): JSX.Element {
         </svg>
         YouTobe
       </NavLink>
-      <input placeholder="Search" />
+      <section>
+        <input placeholder="Search" onChange={handleChange}/>
+        <NavLink to={`/search/${seachValue}`}>Search</NavLink>
+      </section>
     </div>
   );
 }
