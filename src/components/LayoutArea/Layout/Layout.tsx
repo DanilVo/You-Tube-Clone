@@ -12,11 +12,11 @@ function Layout(): JSX.Element {
   const [videos, setVideos] = useState<VideoCardModel[]>();
 
   useEffect(() => {
-    youTobeService.getVideos(`search?part=snippet&q=${pageName}`).then((data) =>
-      setVideos(data)
-    );
+    youTobeService
+      .getSearchVideos(`${pageName}`)
+      .then((data) => setVideos(data));
   }, [pageName]);
-  
+
   return (
     <div className="Layout">
       <header>

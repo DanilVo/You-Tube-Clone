@@ -3,7 +3,7 @@ import './Header.css';
 import { useState } from 'react';
 
 function Header(): JSX.Element {
-  const [seachValue, setSearchValue] = useState('')
+  const [seachValue, setSearchValue] = useState<string>('')
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>)=>{
     const {target} = event
     setSearchValue(target.value)

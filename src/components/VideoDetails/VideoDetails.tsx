@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
-import { useParams } from 'react-router-dom';
-import VideoDataModel from '../../Models/VideoDataModel';
-import youTobeService from '../../Service/YoutobeService';
-import './VideoDetails.css';
-import VideoCardModel from '../../Models/VideoCardModel';
-import VideoCard from '../VideoCard/VideoCard';
+import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
+import { useParams } from "react-router-dom";
+import VideoDataModel from "../../Models/VideoDataModel";
+import youTobeService from "../../Service/YoutobeService";
+import "./VideoDetails.css";
+import VideoCardModel from "../../Models/VideoCardModel";
+import VideoCard from "../VideoCard/VideoCard";
 
 function VideoDetails(): JSX.Element {
   const { path } = useParams();
@@ -19,7 +19,7 @@ function VideoDetails(): JSX.Element {
       .then((data) => setVideoData(data[0]));
 
     youTobeService
-      .getVideos(`search?part=snippet&relatedToVideoId=${path}&type=video`)
+      .getRelatedVideosFromVideo(`${path}`)
       .then((data) => setVideos(data));
   }, []);
 
@@ -31,9 +31,11 @@ function VideoDetails(): JSX.Element {
         <br />
         {parseInt(videoData?.statistics.likeCount).toLocaleString()} Likes
       </section>
-      {videos?.map((item, idx) => (
-        <VideoCard video={item} />
-      ))}
+      <div className="videos">
+        {videos?.map((item) => (
+          <VideoCard video={item} />
+        ))}
+      </div>
     </div>
   );
 }

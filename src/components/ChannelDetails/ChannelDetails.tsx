@@ -16,12 +16,12 @@ function ChannelDetails(): JSX.Element {
   useEffect(() => {
     //channel information
     youTobeService
-      .getVideos(`channels?part=snippet&id=${path}`)
+      .getChannelData(`${path}`)
       .then((data) => setChannelDetail(data[0]));
 
     //channel videos
     youTobeService
-      .getVideos(`search?channelId=${path}&part=snippet%2Cid&order=date`)
+      .getVideosFromChannelId(`${path}`)
       .then((data) => setVideos(data));
   }, [path]);
 
@@ -37,7 +37,7 @@ function ChannelDetails(): JSX.Element {
           {parseInt(channelDetail?.statistics.subscriberCount).toLocaleString()}
         </span>
       </div>
-      {videos?.map((item, idx) => (
+      {videos?.map((item) => (
         <div className="cards">
           <VideoCard video={item} />
         </div>
