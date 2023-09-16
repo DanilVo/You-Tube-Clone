@@ -1,9 +1,9 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import "./ButtonComponent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./ButtonComponent.css";
 
 interface Props {
-  onClick: () => void;
+  onClick: React.MouseEventHandler<HTMLElement>;
   value: string;
   text: string;
   icon: IconDefinition;

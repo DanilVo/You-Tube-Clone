@@ -25,7 +25,7 @@ function VideoDetails(): JSX.Element {
 
   return (
     <div className="VideoDetails">
-      <ReactPlayer url={`https://www.youtube.com/watch?v=${path}`} controls />
+      <ReactPlayer url={`https://www.youtube.com/watch?v=${path}`} controls width={'700px'}/>
       <section>
         {parseInt(videoData?.statistics.viewCount).toLocaleString()} Views
         <br />

@@ -15,7 +15,6 @@
   overflow: auto;
 }
 
-.Layout,
-.Layout > * {
-  border: 1px solid blueviolet;
+.Layout > aside {
+  border-right: 1px solid rgb(255, 0, 0);
 }

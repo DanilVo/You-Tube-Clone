@@ -1,14 +1,15 @@
 .Main .cards {
   display: flex;
   float: left;
-  margin: 50px 50px 25px 10px;
+  margin: 25px 25px 25px 25px;
 }
 
 .Main .section {
+  margin-left: 25px;
   text-transform: capitalize;
   font-size: x-large;
 }
 
 .section span {
-  color: rgb(100, 0, 194);
+  color:black;
 }

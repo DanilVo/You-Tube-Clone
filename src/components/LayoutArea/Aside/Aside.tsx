@@ -6,11 +6,12 @@ import {
   faGamepad,
   faGraduationCap,
   faPodcast,
+  faRefresh,
   faShirt,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
-import "./Aside.css";
+} from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
+import ButtonComponent from '../../UiComponents/ButtonComponent/ButtonComponent';
+import './Aside.css';
 
 function Aside({
   setPageName,
@@ -24,66 +25,78 @@ function Aside({
 
   return (
     <div className="Aside">
-      <NavLink to={"/"}>
-        {/* <ButtonComponent
+      <NavLink to={'/'}>
+        <ButtonComponent
           onClick={pageHandler}
           value="New"
           text="New"
-          icon={faGamepad}
-        /> */}
-        <button onClick={pageHandler} value="New">
-          <FontAwesomeIcon icon={faGamepad} />
-          &ensp; New
-        </button>
+          icon={faRefresh}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Coding">
-          <FontAwesomeIcon icon={faCode} />
-          &ensp; Coding
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Coding"
+          text="Coding"
+          icon={faCode}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="ReactJs">
-          <FontAwesomeIcon icon={faAtom} />
-          &ensp; ReactJs
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="React"
+          text="React"
+          icon={faAtom}
+        />
       </NavLink>
 
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Education">
-          <FontAwesomeIcon icon={faGraduationCap} />
-          &ensp; Education
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Education"
+          text="Education"
+          icon={faGraduationCap}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Podcast">
-          <FontAwesomeIcon icon={faPodcast} />
-          &ensp; Podcasts
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Podcast"
+          text="Podcast"
+          icon={faPodcast}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Movies">
-          <FontAwesomeIcon icon={faFilm} />
-          &ensp; Movies
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Gaming"
+          text="Gaming"
+          icon={faGamepad}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Gaming">
-          <FontAwesomeIcon icon={faGamepad} />
-          &ensp; Gaming
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Movies"
+          text="Movies"
+          icon={faFilm}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Sport">
-          <FontAwesomeIcon icon={faBasketball} />
-          &ensp; Sport
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Sports"
+          text="Sports"
+          icon={faBasketball}
+        />
       </NavLink>
-      <NavLink to={"/"}>
-        <button onClick={pageHandler} value="Fashion">
-          <FontAwesomeIcon icon={faShirt} />
-          &ensp; Fashion
-        </button>
+      <NavLink to={'/'}>
+      <ButtonComponent
+          onClick={pageHandler}
+          value="Fashion"
+          text="Fashion"
+          icon={faShirt}
+        />
       </NavLink>
     </div>
   );

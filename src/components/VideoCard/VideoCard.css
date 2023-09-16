@@ -1,9 +1,9 @@
 .VideoCard {
-  background-color: #0073e6;
+  background-color: #116D6E;
   border-radius: 10px;
   color: #000000;
-  width: 350px;
-  height: 360px;
+  width: 250px;
+  height: 290px;
   display: flex;
   flex-direction: row;
 }
@@ -15,7 +15,7 @@
 }
 
 .VideoCard a img {
-  width: 350px;
+  width: 250px;
 }
 
 .VideoCard section {

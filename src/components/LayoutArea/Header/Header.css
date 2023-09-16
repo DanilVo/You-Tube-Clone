@@ -1,5 +1,5 @@
 .Header {
-  margin: 10px;
+  margin: 10px 0px 0px 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,14 +10,28 @@
   display: flex;
   text-decoration: none;
   align-items: center;
-  background: linear-gradient(to right, #0073e6, #0073e600);
-  padding: 10px 20px 10px 10px;
+  background: linear-gradient(to right bottom, #cd1818, #0073e600);
+  padding: 0px 15px 0px 10px;
   border-radius: 10px 5px 5px 10px;
+}
+
+.Header span {
+  color: black;
+  margin-left: 10px;
 }
 
 .Header input {
   all: unset;
-  border: 1px solid #0073e6;
+  border: 1px solid #cd1818;
   border-radius: 15px;
   padding: 10px;
+}
+.Header > section {
+  margin-right: 15px;
+  display: flex;
+}
+
+.Header > section a {
+  /* display: flex; */
+  margin-left: 20px;
 }
