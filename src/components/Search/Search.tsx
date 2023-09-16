@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import './Search.css';
-import youTobeService from '../../Service/YoutobeService';
 import { useParams } from 'react-router-dom';
 import VideoCardModel from '../../Models/VideoCardModel';
+import youTobeService from '../../Service/YoutobeService';
 import VideoCard from '../VideoCard/VideoCard';
+import './Search.css';
 
 function Search(): JSX.Element {
   const { searchTerm } = useParams();
